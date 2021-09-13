@@ -1,9 +1,9 @@
-# golang-tuts
-Golang tutorial
+
+### Golang tutorial
 
 
 
-Day 1:
+# Day 1:*
 
 1. Variable declaration
 2. Constants
@@ -13,7 +13,7 @@ Day 1:
 6. DuckTyping with Interfaces
 
 
-Day 2:
+# Day 2:
 
 1. Array and Slices
 2. Map in golang
