@@ -25,8 +25,11 @@ main :
 call constructors of 3 structs.
 and call getDetails for all 3.
 
+https://gobyexample.com/switch
 
 
+
+# Day 3:
 
 1. Array and Slices
 2. Map in golang
