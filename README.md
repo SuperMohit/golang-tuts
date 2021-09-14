@@ -15,6 +15,19 @@
 
 # Day 2:
 
+Assignment:   
+
+main : 
+
+1. Create an hrm struct -- employee package
+2. Employee you pass it will return employee of that type: Factory Pattern with 3 structs we created. 
+
+call constructors of 3 structs.
+and call getDetails for all 3.
+
+
+
+
 1. Array and Slices
 2. Map in golang
 3. for...range
