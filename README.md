@@ -7,9 +7,9 @@
 
 1. Variable declaration
 2. Constants
-3. Derived Data types with type keyword
+3. Derived Data types with `type` keyword
 4. Enums 
-5. Struct and memeber fields and methods
+5. Struct and member fields and methods
 6. DuckTyping with Interfaces
 
 
