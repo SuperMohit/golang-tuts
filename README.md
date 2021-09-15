@@ -26,6 +26,7 @@ call constructors of 3 structs.
 and call getDetails for all 3.
 
 https://gobyexample.com/switch
+
 https://yourbasic.org/golang/type-assertion-switch/
 
 
