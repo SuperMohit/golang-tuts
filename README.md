@@ -37,6 +37,8 @@ https://yourbasic.org/golang/type-assertion-switch/
 2. Map in golang
 3. for...range
 4. make keyword
+
+# Day 4:
 5. goroutines
 6. waitgroups and mutexes 
 
