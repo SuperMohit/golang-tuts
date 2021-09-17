@@ -1,196 +1,133 @@
 package main
 
 import (
-	"flag"
 	"fmt"
-	"github.com/google/uuid"
 )
 
-
-// derived datatype
-type studentName string
-
-// define enums
-
-
-type Database string
-
-// constants
-// const
-const  (
-	postgres Database = "postgres 1.1"
-	mysql Database = "mysql 2.2"
-)
-
-
-// enum in the golang with derived data types
-type City int
-
-const (
-	mumbai City = iota + 2   //iota
-	delhi
-	hyderabad
-)
-
-
-
-// how can we add functionality to derived data types
+//type student struct {
+//	id string
+//}
 
 func main() {
+	//unbuffered()
 
-	// variable declaration
-	// 1st way
-	//initVariables()
+	// buffered  -- multiple messages in pipes
 
-	//derivedDTypes()
+	// pipe can hold upto 4 string values and then it will be blocked for consumption
 
-	//structDeclaration()
+	// buffered channels example
+	// buffered is filled it is non-blocking
+	ch := make(chan int, 2)
+	ch <- 1
+	//fmt.Println(<-ch)
 
-
-	// some input- condition I can initialize my write variable
-
-	var write Writer
-	write = cloudStorage{}
-	write.WriteToConsole("I am cloud")
-
-
-	write = onPrem{}
-	write.WriteToConsole("I am on Prem")
-
-}
+	//fmt.Println(<-ch)
+	// channel is already full so it blocks
+	//ch <- 2
+	//fmt.Println(<-ch)
 
 
-// define interfaces in golang
-// Duck Typing
-type Writer interface {
-	WriteToConsole(input string) error
-}
+	//isFinished := make(chan bool)
+	student := make(chan int)
+	go printStudentRollNumber(student)
 
-type cloudStorage struct {
-	onPrem
-}
-
-func (cloudStorage ) WriteToCloud(input string) error  {
-	fmt.Println(input)
-	return nil
-}
-
-func (cloudStorage ) WriteToConsole(input string) error  {
-	fmt.Println(input)
-	return nil
-}
-
-func (onPrem) WriteToConsole(input string) error  {
-	fmt.Println(input)
-	return nil
-}
-
-
-type onPrem struct {
-
-}
-
-
-
-func structDeclaration() {
-	var emp Employee
-	emp.salary = 100
-	emp.name = "Santosh"
-	emp.EmployeeName()
-
-	var emp1 Employee
-	emp1 = Employee{
-		name:   "Mohit",
-		salary: 50,
+	// ranging over channel
+	// for loop breaks when channel is closed
+	for v := range student {
+		fmt.Println(v)
 	}
-	emp1.EmployeeName()
+	//ch <- 2
+	// blocking operator // buffered
+//	fmt.Println(<-ch)
+	//fmt.Println(<-ch)
+  // blocking operator available
 
-	emp2 := Employee{
-		name:   "Ramya",
-		salary: 150,
+}
+
+//
+//
+//func printsStudentName( names chan string){
+//	names <- "Mohit"
+//	names <- "Santosh"
+//
+//	names <- "Rohit"
+//	names <-  "Sehwag"
+//
+//}
+
+func unbuffered() {
+	//should be able to communicate to the
+	//main thread that it has finished execution
+
+	// unbuffered chnanel - 1 value in the channel
+	//isFinished := make(chan bool)
+	student := make(chan int)
+	go printStudentRollNumber(student)
+
+	//v := <-isFinished
+	//fmt.Println("Recieved the student with id ", v.id)
+
+	fmt.Println("unblocked")
+}
+
+//  channels -- pipe
+//   producers ---pipe--- consumers
+//   processe1 --- pipe-- process2
+
+// communication between two threads or processes
+
+func channels(){
+	// blocks on main goroutine
+	// go keyword - would run in separate goroutine
+	//go printStudentRollNumber()
+	// continues execution
+	// ->  <-  arraow operator to write into channel or read from channel
+	// make(chan <data_type_message>)
+	chn := make(chan int)
+	chn <- 1    // blocking   // chn is waiting for consumer to consume the data
+	fmt.Println(<-chn)
+	fmt.Println("reached")
+
+	chn1 := make(chan int)
+
+	// your are reading from chn1 and storing it in variable
+	v := <-chn1
+
+
+	// channels are blocking in nature
+	// empty channels block
+	// filled channels block
+
+
+	fmt.Println(v)
+}
+
+
+
+
+
+
+// producer of roll number
+func printStudentRollNumber(student chan int) {
+	for i :=1; i <= 100; i++ {
+		student <- i
 	}
 
-	emp2.salary = 275
-	emp2.EmployeeName()
-}
-
-//object representation in golang
-// fields as well as methods
-type Employee struct {
-	id uuid.UUID
-	name string
-	salary int
-}
-
-// methods
-func (e Employee) EmployeeName()  {
-	fmt.Println(e.name)
-
-	salary := e.EmployeeSalary()
-
-	fmt.Println(salary)
-}
-
-func (e Employee) EmployeeSalary() int {
-	return e.salary
+	// closing the channel is important to signal that channel is closed
+	// always called from producer go routine
+	close(student)
+	//isFinished <- true
 }
 
 
+// assignment
 
-type name interface {
-
-}
-
-
-func derivedDTypes() {
-	userInput := "postgres 1.1"
-	// read from command line
-	fmt.Scan()
-
-	flag.Args() // pass variables
-	// defining derived datatype for const
-	switch userInput {
-	case string(postgres):
-		fmt.Print("Using postgres")
-	case string(mysql):
-		fmt.Print("Using mysql")
-	}
-}
-
-func initVariables() {
-	var text, text1 string
-	text = "Flying to the moon"
-	fmt.Println(text)
-
-	text1 = "Flying to the pluto"
-	fmt.Println(text1)
-
-	//second way of variable declaration
-	textNew := "Flying to the sun"
-
-	textNum := 1
-
-	fmt.Println(textNum)
-	fmt.Println(textNew)
-
-	//golang can also have derived data types
-	// type keyword
-	// interface
-	// struct
-	var stu studentName
-
-	stu = "Santosh"
-
-	fmt.Print(stu)
-}
+// pipeline pattern using goroutines
+// create a producer thread  -   write some values to a channel-1 say 1- 50
+// create a consumer-1 thread  -- consume the values from channel-1 , produce square of those values - put it into new channel-2
+// create a consumer-2 thread -- this prints the squared value form the channel-2
 
 
-
-
-type VoiceMailer interface {
-	sendMail(subject, body, receiver string)
-	
-}
 
 
 
