@@ -105,8 +105,6 @@ func channels(){
 
 
 
-
-
 // producer of roll number
 func printStudentRollNumber(student chan int) {
 	for i :=1; i <= 100; i++ {
