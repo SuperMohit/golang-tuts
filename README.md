@@ -54,7 +54,8 @@ https://yourbasic.org/golang/type-assertion-switch/
  * create a consumer-2 thread -- this prints the squared value form the channel-2
 
 # Day 5:
-1. sync package wait group and mutexes
+1. Worker Pool using go routine
+2. sync package wait group and mutexes
 
 
 
