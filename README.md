@@ -39,7 +39,22 @@ https://yourbasic.org/golang/type-assertion-switch/
 4. make keyword
 
 # Day 4:
-5. goroutines
-6. waitgroups and mutexes 
+1. goroutines
+2. channels 
+3. buffered and unbuffered
+4. communication using channels
+5. Arrow operator to transfer data 
+
+
+## assignment
+
+ * pipeline pattern using goroutines
+ * create a producer thread  -   write some values to a channel-1 say 1- 50
+ * create a consumer-1 thread  -- consume the values from channel-1 , produce square of those values - put it into new channel-2
+ * create a consumer-2 thread -- this prints the squared value form the channel-2
+
+# Day 5:
+1. sync package wait group and mutexes
+
 
 
