@@ -65,14 +65,20 @@ https://yourbasic.org/golang/type-assertion-switch/
 # Day 7:
 1. HTTP server using golang
 2. Gorilla mux for route creation
+3. REST documentation using go-swagger
 
 # Day 8:
 1. Structuring projects in golang
 2. creating Microservices
+3. Logging using zap
 
 # Day 9:
 1. Asynchronous communication with RabbitMQ
 2. Introducing MongoDB
+
+# Day 10:
+
+1. gRPC based communication using protobuf
 
 
 
