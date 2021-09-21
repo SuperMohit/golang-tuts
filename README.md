@@ -66,7 +66,7 @@ https://yourbasic.org/golang/type-assertion-switch/
 1. HTTP server using golang
 2. Gorilla mux for route creation
 
-# Day 8.:
+# Day 8:
 1. Structuring projects in golang
 2. creating Microservices
 
