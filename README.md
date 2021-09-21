@@ -70,6 +70,10 @@ https://yourbasic.org/golang/type-assertion-switch/
 1. Structuring projects in golang
 2. creating Microservices
 
+# Day 9:
+1. Asynchronous communication with RabbitMQ
+2. 
+
 
 
 
