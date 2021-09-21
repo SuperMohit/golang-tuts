@@ -57,5 +57,26 @@ https://yourbasic.org/golang/type-assertion-switch/
 1. Worker Pool using go routine
 2. sync package wait group and mutexes
 
+# Day 6:
+1. Functional programming - Function is the first class citizen
+2. Decorator for functions
+3. Simple state machine implementation
+
+# Day 7:
+1. HTTP server using golang
+2. Gorilla mux for route creation
+
+# Day 8.:
+1. Structuring projects in golang
+2. creating Microservices
+
+
+
+
+
+ 
+
+
+
 
 
