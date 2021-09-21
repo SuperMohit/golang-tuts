@@ -72,7 +72,7 @@ https://yourbasic.org/golang/type-assertion-switch/
 
 # Day 9:
 1. Asynchronous communication with RabbitMQ
-2. 
+2. Introducing MongoDB
 
 
 
