@@ -68,7 +68,7 @@ https://yourbasic.org/golang/type-assertion-switch/
 3. REST documentation using go-swagger
 
 # Day 8:
-1. Structuring projects in golang
+1. Structuring projects in golang - https://github.com/golang-standards/project-layout
 2. creating Microservices
 3. Logging using zap
 
