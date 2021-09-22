@@ -112,6 +112,22 @@ func addsNumber(f stringDecorator) stringDecorator  {
 }
 
 
+func errorHandling() {
+	// basic syntax every where
+	data, err := fileOpen("/var/db", false)
+	// you received an error
+	if err != nil {
+		log.Print("error received ", err.message,"  " ,err.statusCode)
+	}
+
+	data, err = fileOpen("/var/db", true)
+	if err != nil {
+		log.Print("error received", err)
+	}
+	log.Print(data)
+}
+
+
 
 
 
