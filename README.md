@@ -70,7 +70,8 @@ https://yourbasic.org/golang/type-assertion-switch/
 # Day 8:
 1. Structuring projects in golang - https://github.com/golang-standards/project-layout
 2. creating Microservices
-3. Logging using zap
+3. creating local K8s cluster- https://kind.sigs.k8s.io/docs/user/quick-start/
+4. Logging using zap
 
 # Day 9:
 1. Asynchronous communication with RabbitMQ
@@ -79,6 +80,7 @@ https://yourbasic.org/golang/type-assertion-switch/
 # Day 10:
 
 1. gRPC based communication using protobuf
+https://netflixtechblog.com/practical-api-design-at-netflix-part-1-using-protobuf-fieldmask-35cfdc606518
 
 
 
