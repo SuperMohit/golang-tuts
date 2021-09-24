@@ -59,25 +59,39 @@ https://yourbasic.org/golang/type-assertion-switch/
 
 # Day 6:
 1. Functional programming - Function is the first class citizen
+
+# Day 7:
+1. Select operation
+2. Anonymous function and closures
+
+## Assignment
+/// Read from One channel and write it into multiple channel
+///
+//  1 2 3 4 5 6 -> ch1
+/// bottleneck
+/// 1 3 4-> ch2   4 5 6  -> ch3
+
+
+# Day 8:
 2. Decorator for functions
 3. Simple state machine implementation
 
-# Day 7:
+# Day 9:
 1. HTTP server using golang
 2. Gorilla mux for route creation
 3. REST documentation using go-swagger
 
-# Day 8:
+# Day 10:
 1. Structuring projects in golang - https://github.com/golang-standards/project-layout
 2. creating Microservices
 3. creating local K8s cluster- https://kind.sigs.k8s.io/docs/user/quick-start/
 4. Logging using zap
 
-# Day 9:
+# Day 11:
 1. Asynchronous communication with RabbitMQ
 2. Introducing MongoDB
 
-# Day 10:
+# Day 12:
 
 1. gRPC based communication using protobuf
 https://netflixtechblog.com/practical-api-design-at-netflix-part-1-using-protobuf-fieldmask-35cfdc606518
