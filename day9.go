@@ -84,4 +84,4 @@ func listen(address string, handler http.Handler) {
 // Read about project layout in golang
 // https://github.com/golang-standards/project-layout
 // controller - service- repository
-// packages should look like
+// try to structure the code based on above layout
