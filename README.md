@@ -80,6 +80,7 @@ https://yourbasic.org/golang/type-assertion-switch/
 1. HTTP server using golang
 2. Gorilla mux for route creation
 3. REST documentation using go-swagger
+4. https://golang.org/doc/articles/wiki/
 
 # Day 10:
 1. Structuring projects in golang - https://github.com/golang-standards/project-layout
@@ -95,6 +96,8 @@ https://yourbasic.org/golang/type-assertion-switch/
 
 1. gRPC based communication using protobuf
 https://netflixtechblog.com/practical-api-design-at-netflix-part-1-using-protobuf-fieldmask-35cfdc606518
+
+Linters enabled in the IDE:
 
 
 
