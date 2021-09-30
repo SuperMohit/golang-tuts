@@ -88,6 +88,10 @@ https://yourbasic.org/golang/type-assertion-switch/
 3. creating local K8s cluster- https://kind.sigs.k8s.io/docs/user/quick-start/
 4. Logging using zap
 
+
+# Day 12:
+1. Microservices-1 : https://github.com/SuperMohit/crypto-coins 
+
 # Day 11:
 1. Asynchronous communication with RabbitMQ
 2. Introducing MongoDB
