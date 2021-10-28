@@ -104,6 +104,14 @@ https://netflixtechblog.com/practical-api-design-at-netflix-part-1-using-protobu
 Linters enabled in the IDE:
 
 
+# Day 14:
+https://kubernetes.io/blog/2018/07/09/ipvs-based-in-cluster-load-balancing-deep-dive/
+https://github.com/natefinch/lumberjack
+https://github.com/bitnami-labs/sealed-secrets
+https://pkg.go.dev/embed
+https://go.dev/blog/generics-proposal
+https://pkg.go.dev/reflect
+
 
 
 
