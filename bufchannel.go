@@ -15,6 +15,8 @@ func main() {
 
 	rand.Intn(100)
 	j := 0
+	
+	// start filling channel - synchronously
 	for {
 		j++
 		i := rand.Intn(20)
@@ -28,6 +30,8 @@ func main() {
 			break
 		}
 	}
+	
+	// wait on main
 	for {
 
 	}
@@ -43,6 +47,7 @@ func fillChan(val string, i int) {
 	select {
 	case chnMap[i] <- val:
 	default:
+		// when channel becomes blocking start flushing
 		go process(chnMap[i], len(chnMap[i]), i)
 		chnMap[i] <- val
 	}
@@ -54,5 +59,6 @@ func process(cn <-chan string, l, k int) {
 		op := <-cn
 		arr = append(arr, op)
 	}
+	// show what is processed and check it is in expected order
 	fmt.Println(fmt.Sprintf("processing q %d array %v", k, arr))
 }
