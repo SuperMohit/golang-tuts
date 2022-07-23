@@ -1,5 +1,6 @@
 
-### Golang tutorial
+### Golang tutorial: This content is for Training Golang:
+If you are interested in training contact mohittalniya@gmail.com
 
 
 
